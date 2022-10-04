@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    .conatiner{
+        background-image: url(https://contentstatic.techgig.com/photo/80158672/top-4-web-development-trends-in-2021.jpg?119426);
+        background-size: cover;
+        height:560px;
+        color: azure;
+        border-radius: 40px;
+        width: 100%;
+
+    }
+    .about{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin-left:20px;
+        font-size: 60px;
+        padding: 0;
+        background: #FF0000;
+        background: linear-gradient(to left, #FF0000 100%, #000000 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    h2{
+        padding-top:  40px;
+        margin-left:20px;
+       
+
+    }
+    #sub{
+        font-size:40px ;
+        color: cyan;
+        margin-left:20px;
+        margin-right:370px;
+        float : right;
+        padding-bottom: 20px;
+    }
+    .desc{
+        margin-left:30px;
+        font-size: 50px;
+        
+    }
+    .fa {
+        padding: 10px;
+        font-size: 30px;
+        width: 50px;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        margin-left:30px;
+      }
+      
+     .fa-facebook {
+         background: #3B5998;
+         color: white;
+       }
+       
+       .fa-instagram {
+         background: #125688;
+         color: white;
+       }
+</style>
+<div class ="conatiner">
+<h2>Hi! my name is </h2><h1 class="about">Harshavardhan Bayavarapu ,</h1><sub id="sub"><b>Student, EEE [NITW-2025]</b></sub>
+    <br><h1 class="desc">I am trying to Build things on WEB</h1>
+    <a href="https://www.facebook.com/profile.php?id=100009509079726" class="fa fa-facebook"></a>
+    <a href="https://instagram.com/harsha__vardhan_b?igshid=YmMyMTA2M2Y=" class="fa fa-instagram"></a>
+    
+
+</div>
+{% endblock %}

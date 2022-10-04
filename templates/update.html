@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    .form{
+     background-image: url(https://neilpatel.com/wp-content/uploads/2017/06/contentlength.jpg);
+     background-repeat: no-repeat;
+     background-size:cover;
+     padding: auto;
+     border: 2px solid #111;
+     border-radius: 10px;
+     height: 500px;
+     width: 85%;
+     margin: auto;
+              }
+    h2,input{
+        margin-left: 50px;
+        margin-bottom: 10px;
+    }
+    #title,#email, #desc{
+        width: 85%;
+        height:30px;
+        border: 2px solid azure;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    .heading{
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    #button{
+        text-align: center;
+        width: 140px;
+        height: 50px;
+        margin-left: 50px;
+        background-color: #111;
+        color: azure;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 15px;
+    }
+    h3{
+        margin: auto;
+    }
+ 
+    </style>
+    <h1 class ="heading">Create your own Article</h1>
+   
+    <form  class = "form" action="/update" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h2>Title</h2>
+        <input type="text" name="title" id="title">
+        <h2>Description</h2>
+        <input type="text" name="desc" id="desc">
+        <label for="img"><h2>Image:</h2></label>
+        <input type="file" id="img" name="img" accept="image/*" >
+        <h2>Email</h2>
+        <input type="email" name="email" id="email"><br>
+        <button id = "button" type="submit"><h3>Publish</h3></button>
+       
+    </form>
+{% endblock %}

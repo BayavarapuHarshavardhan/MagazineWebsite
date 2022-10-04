@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine</title>
+    <style>
+        .navbar{
+            background-color:  #4169E1;
+            list-style-type:none ;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+         
+        }
+        #joke{
+            font-size:20px;
+            padding: 5px;
+            color: azure;
+        }
+        .joker{
+            text-align: center;
+            height: 30px;
+            background: #FF0000;
+            background: linear-gradient(to left, #FF0000 27%, #4169E1 61%, #FF0000 75%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+            background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v996-015-kroir8sb.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=3cd993992114e2eea056c9b00c4892f5);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        li{
+            float: left;   
+        }
+        a{
+            text-decoration: none;
+            background-color: #4169E1;
+            color: azure;
+            display: block;
+            font-size: 25px;
+            font-family:'Times New Roman', Times, serif;
+            padding:  13px 13px;
+        
+        }
+        li a:hover {
+            background-color: #111;
+          }
+    </style>
+</head>
+<body>
+    <ul class = "navbar">
+        <li><a href="/">Home</a></li>
+        <li><a href="/update">Write an Article</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+    <div class="joker">
+        <h1 id = "joke">My senior relatives liked to tease me at weddings, saying things like, “You’ll be next!” They stopped once I started doing the same to them at funerals.</h1>
+    </div>
+    
+    {% block content %}
+    {% endblock %}
+</body>
+<script>
+    jokes = ["Today, I asked my phone “Siri, why am I still single?” and it activated the front camera.",
+  "Today, I asked my phone “Siri, why am I still single?” and it activated the front camera.",
+  "My senior relatives liked to tease me at weddings, saying things like, “You’ll be next!” They stopped once I started doing the same to them at funerals.",
+  "The other day, my wife asked me to pass her lipstick but I accidentally passed her a glue stick. She still isn't talking to me.",
+  "Never break someone's heart, they only have one. Break their bones instead, they have 206 of them.",
+  "Today was a terrible day. My ex got hit by a bus. And I lost my job as a bus driver!",
+  "You don’t need a parachute to go skydiving. You need a parachute to go skydiving twice.",
+  "My senior relatives liked to tease me at weddings, saying things like, “You’ll be next!” They stopped once I started doing the same to them at funerals.",
+  "The doctor gave me one year to live, so I shot him. The judge gave me 15 years. Problem solved.",
+  "Never break someone's heart, they only have one. Break their bones instead, they have 206 of them."
+]
+const func = ()=>{
+    let a = document.getElementById("joke")
+    console.log(a)
+    let index = Math.floor((Math.random() * 10))
+    console.log(index)
+    a.innerHTML = jokes[index]
+    a.nextElementSibling.style.color = "red"
+}
+setInterval(func,7000);
+</script>
+</html>
+
+
+
